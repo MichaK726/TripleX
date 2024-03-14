@@ -1,11 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void PrintIntroduction()
 {
-    // Print welcome messages to the terminal
     cout << "You are a secret agent breaking into a secure server room..." << endl;
     cout << "Enter the correct code to continue..." << endl;
+}
+
+void PlayGame()
+{
+    PrintIntroduction();
 
     // Declare 3 number code
     const int CodeA = 4;
@@ -21,7 +25,26 @@ int main()
     cout << "The codes add up to: " << CodeSum << endl;
     cout << "The numbers multiply to: " << CodeProduct << endl;
 
-    int PlayerGuess;
+    // Store player guess
+    int GuessA, GuessB, GuessC;
+    cin >> GuessA >> GuessB >> GuessC;
 
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    // Check if the players guess is correct
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
+    {
+        cout << "You win!";
+    }
+    else
+    {
+        cout << "You lose!";
+    }
+}
+
+int main()
+{
+    PlayGame();
     return 0;
 }
