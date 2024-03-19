@@ -4,8 +4,8 @@ using namespace std;
 
 void PrintIntroduction(int Difficulty)
 {
-    cout << "\n\nYou are a secret agent breaking into a level " << Difficulty;
-    cout << " secure server room...\nEnter the correct code to continue...\n\n";
+    cout << "\n\nYou are a bomb squad technician disarming a level " << Difficulty;
+    cout << " bomb...\nEnter the correct code to break a layer of protection...\n\n";
 }
 
 bool PlayGame(int Difficulty)
@@ -35,7 +35,7 @@ bool PlayGame(int Difficulty)
     // Check if the players guess is correct
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        cout << "\n*** Well done agent! You have extracted a file! Keep going! ***";
+        cout << "\n*** Well done agent! You are one step closer to defusing this bomb! Keep going! ***";
         return true;
     }
     else
@@ -64,7 +64,7 @@ int main()
         }
     }
 
-    cout << "\n*** Great work agent! You got all the files! Now get out of there! ***";
+    cout << "\n*** Great work agent! You have defused the bomb! ***";
 
     return 0;
 }
